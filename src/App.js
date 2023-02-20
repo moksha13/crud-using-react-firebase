@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import SignInWithFB from "./components/SignInWithFB";
 
 function App() {
+  // const [marksList, setMarksList] = useState([]);
+
+  // const marksCollectionRef = collection(db, "subjects");
+
+  // const getMarksList = async () => {
+  //   try {
+  //     const data = await getDocs(marksCollectionRef);
+  //     const filteredData = data.docs.map((doc) => ({
+  //       ...doc.data(),
+  //       id: doc.id,
+  //     }));
+  //     setMarksList(filteredData);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+
+  // useEffect(()=>{
+  //   getMarksList();
+  //  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SignInWithFB/>
     </div>
   );
 }
 
 export default App;
+
+
+// const Auth = ()=>{
+//   const [email, setEmail] = useState("")
+//   const [password, setPassword] = useState("")
+
+//   const signIn = async() =>{
+//     await createUserWithEmailAndPassword(auth,email, password)
+//   }
+//   return(
+//     <div>
+//       <input type='email' placeholder="enter email" onChange={(e)=>setEmail(e.target.value)}/>
+//       <input type='password' placeholder="enter password" onChange={(e)=>setPassword(e.target.value)}/>
+//       <button onClick={signIn}>Sign In</button>
+//     </div>
+//   )
+// }
